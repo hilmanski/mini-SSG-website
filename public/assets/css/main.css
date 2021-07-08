@@ -11,6 +11,10 @@ body {
 	background: #F0ECE9;
 }
 
+img{
+	max-width: 100%;
+}
+
 .text-center {
 	text-align: center;
 }
@@ -26,6 +30,17 @@ body {
 
 a {
 	color: #2750FF;
+}
+a.link-cool {
+	color:  #333;
+	background: #FBF338;
+	display: inline-block;
+	padding: 5px;
+	text-decoration: none;
+	transition: background 0.5s;
+}
+a.link-cool:hover{
+	background: #FBE74B;
 }
 
 .flex.is-space-around{
@@ -71,20 +86,18 @@ h1{
 }
 
 .alert-warning {
-	background: #F0FF50;
+	background: #A1FF56;
 	padding: 10px 15px;
 	margin: 10px 0;
 	border-radius: 10px;
 }
 
 @media only screen and (max-width: 760px) {
-	body{
-		font-size: 16px;
+	 
+	.desktop-only {
+		display: none;
 	}
 
-	img{
-		max-width: 100%;
-	}
   .flex {
   	display: block;
   }
@@ -93,7 +106,7 @@ h1{
   	font-size: 2rem;
   }
 
-  .xl{
-		font-size: 1.5rem;
+	.bubble {
+		margin: 0 0px;
 	}
 }
