@@ -81,6 +81,14 @@ h1{
 	border-radius: 20px;
 }
 
+.m {
+	font-size: 1.5rem;
+}
+
+.l{
+	font-size: 1.8rem;
+}
+
 .xl{
 	font-size: 2rem;
 }
@@ -92,25 +100,49 @@ h1{
 	border-radius: 10px;
 }
 
+.extra-info {
+	color: #333;
+}
+
 @media only screen and (max-width: 760px) {
-	 
-	.desktop-only {
-		display: none;
+	body{
+		width: 90%;
+	}
+	
+	code[class*=language-], pre[class*=language-]{
+		font-size: 0.9em !important;
 	}
 
-  .flex {
-  	display: block;
-  }
+	.desktop-only {
+	display: none;
+	}
 
-  h1{
-  	font-size: 1.8rem;
-  }
+	.flex {
+	display: block;
+	}
 
-  h2{
-  	font-size: 1.5rem;
-  }
+	h1{
+	font-size: 1.8rem;
+	}
+
+	h2{
+	font-size: 1.5rem;
+	}
 
 	.bubble {
-		margin: 0 0px;
+	margin: 0 0px;
 	}
+
+	.m {
+	font-size: 1.3rem;
+	}
+
+	.l{
+		font-size: 1.5rem;
+	}
+
+	.xl{
+		font-size: 1.8rem;
+	}
+
 }

@@ -16,16 +16,19 @@
 	<div class="v-group">
 		<div>
 			<h3>
-				Check this minimal syntax
+				Overview of our minimal syntax
 			</h3>
 			
 			<br>
 			<p>1. Import Page </p>
 			<pre class="br-20"><code class="language-html">
 @import(header)		
+
 &lt;p&gt;Your awesome content&lt;/p&gt;
+
 @import(footer)
-&lt;!-- anything you put inside '_imports/header.html' 
+
+&lt;!-- anything inside '_imports/header.html' 
 & '_imports/footer.html' will be rendered here --&gt;
 			</code></pre>
 			<p>*No need to write .html or quotation mark("/')</p>
@@ -80,6 +83,8 @@
 		<br>
 			<p>3. Need component? don't worry!</p>
 			<pre class="br-20"><code class="language-html">
+&lt;h2&gt;Other stuff&lt;/h2&gt;
+
 @component(story)
 	@slot(fullDiv)
 		&lt;p&gt;😀 I'm slot with name text&lt;/p&gt;
