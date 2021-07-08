@@ -74,6 +74,9 @@ npm install mini-ssg
 			<p>*<code>@import(NAME)</code> //could be anything match your .html files</p>
 
 			<br>
+			<p class="alert-warning text-center">All static files you want to render must be in '/dev/pages/'</p>
+
+			<br>
 			<p>3b. Now create header.html and footer.html inside dev/_imports folder, with any content you want</p>
 			<pre class="br-20"><code class="language-html">
 &lt;!-- Ex: in dev/_imports/header.html --&gt;
@@ -106,6 +109,30 @@ npm run dev
 		<br>
 		<div>
 			<p>Want to see a complete example? check this  <a href="https://github.com/hilmanski/mini-SSG-website" target="_blank">website repo</a></p>
+		</div>
+
+
+		<br>
+		<div>
+			//Folder structure example
+			<pre class="br-20"><code class="language-bash">
+/YourProject
+	/dev
+		/_layouts
+			/base.html
+		/_components
+			/alert.html
+		/_imports
+			header.html
+			footer.html
+		/pages
+			/assets/css/main.css
+					/js/main.js
+			/index.html
+			/about.html
+
+	/public (Your ready to deploy folder)
+			</code></pre>
 		</div>
 
 	</div>
