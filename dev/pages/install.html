@@ -7,19 +7,78 @@
 
 <main>
 	<div class="hero text-center">
-		<h1>How to install Mini-SSG</h1>
+		<h1>Get started with Mini-SSG</h1>
 		<h2>Mini-SSG built with NodeJS, so Node/NPM is needed</h2>
-
 		<br>
-		<p>If you're new to Node/NPM, <a href="https://nodejs.org/en/" target="_blank">install it</a>  first</p>
 	</div>
 
 	<div class="v-group">
+
 		<div>
-		<p>1. Install mini-SSG with npm</p>
-		<pre><code class="language-bash">
-$ npm install mini-ssg
-		</code></pre>
+			<p> 1. Install mini-SSG with npm</p>
+			<p>If you're new to Node/NPM, <a href="https://nodejs.org/en/" target="_blank">install it</a>  first</p>
+			<pre class="br-20"><code class="language-bash">
+npm init -y 				
+npm install mini-ssg
+			</code></pre>
+		</div>
+
+		<div>
+			<p>2. Add this script to your package.json</p>
+			<pre class="br-20"><code class="language-bash">
+  "scripts": {
+    "start": "minissg",
+    "dev": "minissg --watch",
+  },
+			</code></pre>
+		</div>
+		
+		<div>
+			<p>3. Depend on what you need <a href="/tour" target="_blank">(check tour)</a> for all syntax.</p>
+			<p>Let's say we want to make a page with same header and footer</p>
+
+			<br>
+			<p>3a. Create <code>dev/pages/index.html</code>, with this value</p>
+			<pre class="br-20"><code class="language-html">
+@import(header)		
+&lt;p&gt;Your awesome content&lt;/p&gt;
+@import(footer)
+			</code></pre>
+			<p>*<code>@import(NAME)</code> //could be anything match your .html files</p>
+
+			<br>
+			<p>3b. Now create header.html and footer.html inside dev/_imports folder, with any content you want</p>
+			<pre class="br-20"><code class="language-html">
+&lt;!-- Ex: in dev/_imports/header.html --&gt;
+&lt;h1&gt;Your Brand&lt;/h1&gt;				
+&lt;p&gt;This is header&lt;/p&gt;
+
+&lt;!-- Ex: in dev/_imports/footer.html --&gt;			
+&lt;p&gt;This is footer&lt;/p&gt;
+			</code></pre>
+
+			<br>
+			<p>3c. Run this command (your choice) </p>
+<pre class="br-20"><code class="language-bash">
+npm run start		
+//or
+npm run dev
+</code></pre>
+			<p>*<code>npm run dev</code> will run a live server at http://localhost:3000
+			and
+			watch any file changes, you still need refresh browser afterwards</p>
+			<p>*<code>npm run start</code> will just render your page</p>
+		</div>
+
+			<p>3d. Your site is ready on /public folder. <br>
+			Whenever your deploy it, tell your provider to serve your site from '/public'</p>
+			
+			<br>
+			<p>4. Continue creating other files, <br>depend on what you need <a href="/tour" target="_blank">(check tour)</a> for all syntax. </p>
+		
+		<br>
+		<div>
+			<p>Want to see a complete example? check this  <a href="https://github.com/hilmanski/mini-SSG-website" target="_blank">website repo</a></p>
 		</div>
 
 	</div>

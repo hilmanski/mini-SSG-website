@@ -33,7 +33,7 @@
 	
 <main>
 	<div class="hero text-center">
-		<h1>Mini SSG helps you write reusable html files</h1>
+		<h1>Mini SSG helps you <br>write reusable html files</h1>
 		<h2>
 			You can create base layout, import partial code <br> and create component
 			for your project.
@@ -45,9 +45,12 @@
 			<h3>
 				Check this minimal syntax
 			</h3>
+
+			
+			<p class="alert-warning">*Create 'dev' folder, all your code lives here</p>
 			
 			<br>
-			<p>1. Import Page</p>
+			<p>1. Import Page </p>
 			<pre class="br-20"><code class="language-html">
 @import(header)		
 &lt;p&gt;Your awesome content&lt;/p&gt;
@@ -55,6 +58,7 @@
 &lt;!-- anything you put inside '_imports/header.html' 
 & '_imports/footer.html' will be rendered here --&gt;
 			</code></pre>
+			<p>*No need to write .html or quotation mark("/')</p>
 
 			<br>
 			<p>2. Use general layout</p>
@@ -69,7 +73,8 @@
 &lt;/main&gt;
 @endsection
 			</code></pre>
-
+			<p>*Value can be passed as 2nd argument if it contains text only or wrap in a tag if contains complex element</p>
+			<br>
 			<p>Inside your <code>/_layouts/base.html</code> </p>
 			<pre class="br-20"><code class="language-html">
 &lt;!DOCTYPE html&gt;
@@ -80,6 +85,24 @@
 &lt;/head&gt;
 &lt;body&gt;
 	@attach(section) &lt;!-- render everything from section above --&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+			</code></pre>
+			<p>*attach syntax will be a placeholder for coming values</p>
+
+			<br>
+			<p>Your layout <code>/_layouts/base.html</code> could also have import statement</p>
+			<pre class="br-20"><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+	&lt;meta charset="UTF-8"&gt;
+	&lt;title>@attach(title)&lt;/title> &lt;!-- render your title above --&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	@import(header)
+	@attach(section) &lt;!-- render everything from section above --&gt;
+	@import(footer)
 &lt;/body&gt;
 &lt;/html&gt;
 			</code></pre>
@@ -111,6 +134,14 @@
 	&lt;/div&gt;	
 &lt;/div&gt;
 			</code></pre>
+
+
+		<br>
+			<p>4. Default value for attach</p>
+			<pre class="br-20"><code class="language-html">
+&lt;title&gt;@attach(title, My default title)&lt;/title&gt;
+			</code></pre>
+			<p>*If no section match 'title', 2nd parameter will be the value</p>
 		</div>
 	</div>
 
@@ -146,7 +177,7 @@
 
 	<br>
 <footer>
-	<p>Thanks!</p>
+	<p>Built with ❤️ by <a href="https://twitter.com/hilmanski" target="_blank">@hilmanski</a> | Any issue, request or Idea? <a href="https://github.com/hilmanski/mini-SSG/" target="_blank"> repo here </a></p>
 </footer>
 </body>
 </html>

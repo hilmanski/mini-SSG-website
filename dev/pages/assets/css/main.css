@@ -70,6 +70,13 @@ h1{
 	font-size: 2rem;
 }
 
+.alert-warning {
+	background: #F0FF50;
+	padding: 10px 15px;
+	margin: 10px 0;
+	border-radius: 10px;
+}
+
 @media only screen and (max-width: 760px) {
   .flex {
   	display: block;
