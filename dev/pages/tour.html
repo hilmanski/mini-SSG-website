@@ -1,0 +1,116 @@
+@layout(base)
+
+@section(title, What is Mini SSG)
+@section(desc, What is Mini SSG, small Static Site Generator - SSG for your HTML files)
+
+@section(content)
+<main>
+	<div class="hero text-center">
+		<h1>Mini SSG helps you write reusable html files</h1>
+		<h2>
+			You can create base layout, import partial code <br> and create component
+			for your project.
+		</h2>
+	</div>
+
+	<div class="v-group">
+		<div>
+			<h3>
+				Check this minimal syntax
+			</h3>
+			
+			<br>
+			<p>1. Import Page</p>
+			<pre class="br-20"><code class="language-html">
+@import(header)		
+&lt;p&gt;Your awesome content&lt;/p&gt;
+@import(footer)
+&lt;!-- anything you put inside '_imports/header.html' 
+& '_imports/footer.html' will be rendered here --&gt;
+			</code></pre>
+
+			<br>
+			<p>2. Use general layout</p>
+			<pre class="br-20"><code class="language-html">
+@layout(base) &lt;!-- 'base' is your html file name, could be anything --&gt		 
+
+@section(title, Your Page Title)
+
+@section
+&lt;main&gt;
+	Hey.. meet your awesome content
+&lt;/main&gt;
+@endsection
+			</code></pre>
+
+			<p>Inside your <code>/_layouts/base.html</code> </p>
+			<pre class="br-20"><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+	&lt;meta charset="UTF-8"&gt;
+	&lt;title>@attach(title)&lt;/title> &lt;!-- render your title above --&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	@attach(section) &lt;!-- render everything from section above --&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+			</code></pre>
+
+		<br>
+			<p>3. Need component? don't worry!</p>
+			<pre class="br-20"><code class="language-html">
+@component(story)
+	@slot(fullDiv)
+		&lt;p&gt;😀 I'm slot with name text&lt;/p&gt;
+		&lt;p&gt;I can be very complex element&lt;/p&gt;
+	@endslot
+
+	@slot(textOnly)
+		I can also be just text like this
+	@endslot
+@endcomponent
+			</code></pre>
+
+			<p>In your <code>/_components/story.html</code></p>
+			<pre class="br-20"><code class="language-html">
+&lt;div&gt;
+	&lt;div class="flex is-space-around"&gt;
+		&lt;div class="someClass"&gt;
+			@attach(fullDiv)
+		&lt;/div&gt;
+
+		&lt;p&gt;@attach(textOnly)&lt;/p&gt;
+	&lt;/div&gt;	
+&lt;/div&gt;
+			</code></pre>
+		</div>
+	</div>
+
+	<br>
+
+	<p>
+		SSG stands for (Static Site Generator), means <br>
+		even though codes above look fancy and dynamic, <br>
+		It will still render everything to HTML files.
+	</p>
+
+	<br>
+
+	<p class="text-right">
+		Static site means <br>
+		-Many free hosting provider <br>
+		-Not easy to hack <br>
+		-More about <a href="https://jamstack.org/glossary/ssg/" target="_blank"> SSG here</a>
+	</p>
+
+	<br>
+
+	<p class="xl text-center">
+		 	<b>	😁 You like it? </b><br>
+			Let's <a href="/install"> install -Mini SSG-</a>	
+	</p>
+
+	@import(prism-highlight)
+</main>
+@endsection

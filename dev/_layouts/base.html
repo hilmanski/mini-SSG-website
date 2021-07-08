@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>@attach(title)</title>
+	<meta name="description" content="@attach(desc)">
+	<meta property="og:title" content="@attach(title)">
+	<meta property="og:description" content="@attach(desc)">
+	<meta property="og:image" content="@attach(thumbnail, https://i.ibb.co/rbTBp5W/Screen-Shot-2021-07-08-at-10-27-49-AM.png)">
+	
+	<meta name="twitter:title" content="@attach(title)">
+	<meta name="twitter:description" content="@attach(desc)">
+	<meta name="twitter:image" content="@attach(thumbnail, https://i.ibb.co/rbTBp5W/Screen-Shot-2021-07-08-at-10-27-49-AM.png)">
+	<meta name="twitter:card" content="summary">
+
+	<link rel="stylesheet" href="/assets/css/main.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+	@import(header)
+
+	@attach(content)
+
+	@import(footer)
+</body>
+</html>

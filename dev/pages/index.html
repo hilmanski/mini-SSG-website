@@ -1,0 +1,77 @@
+@layout(base)
+
+@section(title, Mini SSG)
+@section(desc, small Static Site Generator - SSG for your HTML files)
+
+@section(content)
+
+<main>
+	<h1 class="hero text-center">This is a story about us <br>& our HTML files<br><br>👇</h1>
+	
+	<div class="v-group">
+	@component(story)
+		@slot(text)
+			<p>😀 We start with just one HTML File</p>
+			<p>	//everything nice & simple</p>
+		@endslot
+
+		@slot(image)
+			https://ik.imagekit.io/kodingclub/minissg/ss1_g7v2g143d.png
+		@endslot
+	@endcomponent
+
+	@component(story)
+		@slot(text)
+			<p>😕  Then.. We add one new file</p>
+			<p>	//copy-paste header & footer to be consistent</p>
+		@endslot
+
+		@slot(image)
+			https://ik.imagekit.io/kodingclub/minissg/ss2_Csx_IZjGK.png
+		@endslot
+	@endcomponent
+
+	@component(story)
+		@slot(text)
+			<p>😥 Then.. new site again.. again.. & again</p>
+			<p>	//copy paste every same components</p>
+		@endslot
+
+		@slot(image)
+			https://ik.imagekit.io/kodingclub/minissg/ss3_LF7OdJNIA2.png
+		@endslot
+	@endcomponent
+
+	@component(story)
+		@slot(text)
+			<p>😱 What if you need to update 1 thing only?</p>
+			<p>	//You need to change here, there & everyhere</p>
+		@endslot
+
+		@slot(image)
+			https://ik.imagekit.io/kodingclub/minissg/ss4_A47UXWZJj.png
+		@endslot
+	@endcomponent
+	</div>
+
+	<div class="v-group-l">
+		<p class="xl text-center">
+			🤔 You start to think.. <br>
+			<em>"Do I need to use Server Side to make it dynamic?"</em>
+		</p>
+
+		<p class="xl text-center">
+			🤔 You start to think.. <br>
+			<em>"Do I need to learn new Javascript language to make it all flexible?"</em>
+		</p>
+
+		<p class="xl text-center">
+		 	<b>	😁 You don't! </b><br>
+			Meet your new friend <a href="/tour"> - Mini SSG - take a tour!</a>	
+		</p>
+	</div>
+
+	
+</main>
+
+@endsection
