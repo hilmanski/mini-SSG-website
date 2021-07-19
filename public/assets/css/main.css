@@ -121,10 +121,6 @@ h1{
 	display: block;
 	}
 
-	.hero {
-		padding: 70px 0;
-	}
-
 	h1{
 	font-size: 1.8rem;
 	}
@@ -146,7 +142,7 @@ h1{
 	}
 
 	.xl{
-		font-size: 1.7rem;
+		font-size: 1.8rem;
 	}
 
 }

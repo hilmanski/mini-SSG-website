@@ -32,6 +32,14 @@ npm install mini-ssg
   },
 			</code></pre>
 		</div>
+
+		<div>
+		<p>Key Concept: </p>
+		<div class="alert-warning">
+			<li> All HTML files you want to render must be in '/dev/pages/'</li>
+			<li>Other static files that don't change (ex: css, js, sitemap.xml, etc..) lives in /dev/static/</li>
+		</div>
+		</div>
 		
 		<div>
 			<p class="m"> 3. Next is up to you </p>
@@ -45,9 +53,6 @@ npm install mini-ssg
 @import(footer)
 			</code></pre>
 			<p>*<code>@import(NAME)</code> //could be anything match your .html files</p>
-
-			<br>
-			<p class="alert-warning text-center">All static files you want to render must be in '/dev/pages/'</p>
 
 			<br>
 			<p>3b. Now create header.html and footer.html inside dev/_imports folder, with any content you want</p>
@@ -99,12 +104,14 @@ npm run dev
 			header.html
 			footer.html
 		/pages
-			/assets/css/main.css
-					/js/main.js
 			/index.html
 			/about.html
+		/static
+			/assets/css/main.css
+					/js/main.js
+			otherstatic.xml
 
-	/public (Your ready to deploy folder)
+	/public (Your ready to deploy folder. Auto generated for you)
 			</code></pre>
 		</div>
 
