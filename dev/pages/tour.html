@@ -40,10 +40,10 @@
 
 @section(title, Your Page Title)
 
-@section
-&lt;main&gt;
+@section(main)
+&lt;div&gt;
 	Hey.. meet your awesome content
-&lt;/main&gt;
+&lt;/div&gt;
 @endsection
 			</code></pre>
 			<p>*Value can be passed as 2nd argument if it contains text only or wrap in a tag if contains complex element</p>
@@ -57,7 +57,7 @@
 	&lt;title>@attach(title)&lt;/title> &lt;!-- render your title above --&gt;
 &lt;/head&gt;
 &lt;body&gt;
-	@attach(section) &lt;!-- render everything from section above --&gt;
+	@attach(main) &lt;!-- render everything from section above --&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 			</code></pre>
@@ -74,7 +74,7 @@
 &lt;/head&gt;
 &lt;body&gt;
 	@import(header)
-	@attach(section) &lt;!-- render everything from section above --&gt;
+	@attach(main) &lt;!-- render everything from section above --&gt;
 	@import(footer)
 &lt;/body&gt;
 &lt;/html&gt;
