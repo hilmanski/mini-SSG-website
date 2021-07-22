@@ -12,6 +12,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "mini-ssg": "^0.2.0"
+    "mini-ssg": "^0.2.2"
   }
 }
